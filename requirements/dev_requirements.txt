@@ -1,2 +1,5 @@
+docutils
 flake8
 isort
+twine
+wheel
