@@ -1,4 +1,4 @@
-.PHONY: check clean description dist release
+.PHONY: check clean description dist release test
 
 check:
 	python setup.py check
@@ -21,3 +21,6 @@ dist:
 
 release:
 	twine upload dist/*
+
+test:
+	python runtests.py
