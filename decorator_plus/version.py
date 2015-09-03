@@ -19,7 +19,7 @@ SEPARATOR = '.'
 
 # PEP 440 Compliant Semantic Versioning
 # major, minor, micro, label/type, label/type number
-VERSION = (0, 0, 1, ALPHA, 0)
+VERSION = (0, 0, 1, ALPHA, 1)
 
 
 def get_git_changeset():
@@ -41,6 +41,11 @@ def get_version(version_tuple):
         raise Exception(
             'Project version number misconfigured:\n'
             '   version may not be final and have segment number.')
+
+    if version_tuple[3] not in (DEV, FINAL) and version_tuple[4] == 0:
+        raise Exception(
+            'Project version number misconfigured:\n'
+            '   version must have segment number.')
 
     if version_tuple[3] == DEV:
         segment_num = get_git_changeset()
