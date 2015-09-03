@@ -76,3 +76,9 @@ def require_http_methods(request_methods):
             return func(request, *args, **kwargs)
         return inner
     return decorator
+
+
+require_safe_methods = require_http_methods(["GET", "HEAD"])
+require_safe_methods.__doc__ = (
+    "Decorator to require that a function view only accept safe methods: "
+    "GET and HEAD.")

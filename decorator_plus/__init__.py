@@ -5,7 +5,9 @@
 from __future__ import print_function, unicode_literals
 
 from decorator_plus.version import __version__  # noqa
-from decorator_plus.view_decorators import require_http_methods
+from decorator_plus.view_decorators import (
+    require_http_methods, require_safe_methods
+)
 
 __all__ = [
     'require_http_methods'
