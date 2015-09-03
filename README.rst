@@ -50,6 +50,7 @@ be accomplished with |pip|_.
 .. code:: console
 
     $ # from the project root directory
+    $ pip install -r requirements/test_requirements.txt
     $ pip install -e .
 
 Tests may then be run thanks to the ``Makefile``.
@@ -57,6 +58,28 @@ Tests may then be run thanks to the ``Makefile``.
 .. code:: console
 
     $ make test
+
+Once local changes pass the test suite, you may use ``tox`` to check the new
+code in other environments.
+
+To see all of the environments being currently test, you may use:
+
+.. code:: console
+
+    $ tox -l
+
+To run all of the tests, use:
+
+.. code:: console
+
+    $ tox
+
+To limit the test to a single environment, the ``e`` flag may be passed:
+
+.. code:: console
+
+    $ # tox -e [environment name]
+    $ tox -e django18-py34
 
 .. _`Package Documentation`: https://django-decorator-plus.readthedocs.org
 .. _`PyPI`: https://pypi.python.org/pypi/django-decorator-plus
