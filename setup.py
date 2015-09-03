@@ -20,8 +20,8 @@ with open(join(PROJECT_DIR, 'DESCRIPTION.rst'), encoding='utf-8') as f:
     long_description = f.read()
 
 version = {}
-init_file = join(PROJECT_DIR, 'decorator_plus', '__init__.py')
-with open(init_file, encoding='utf-8') as f:
+version_file = join(PROJECT_DIR, 'decorator_plus', 'version.py')
+with open(version_file, encoding='utf-8') as f:
     exec(f.read(), version)
 
 setup(
@@ -39,7 +39,7 @@ setup(
 
     license='Simplified BSD License',
 
-    install_requires=['Django>=1.4', 'six'],
+    install_requires=['Django>=1.4'],
 
     # See https://pypi.python.org/pypi?%3Aaction=list_classifiers
     classifiers=[

@@ -7,8 +7,6 @@ from __future__ import print_function, unicode_literals
 from datetime import datetime
 from subprocess import PIPE, Popen
 
-from six.moves import map
-
 
 DEV = 'dev'
 ALPHA = 'a'
@@ -50,7 +48,10 @@ def get_version(version_tuple):
         segment_num = str(abs(version_tuple[4]))
 
     # X.X.X
-    sem_ver = ".".join(map(str, map(abs, version_tuple[:3])))
+    sem_ver = ".".join([
+        str(abs(int(number)))
+        for number in version_tuple[:3]
+    ])
 
     if version_tuple[3] != FINAL:
         if version_tuple[3] in (ALPHA, BETA, RC):
