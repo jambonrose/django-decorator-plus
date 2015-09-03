@@ -23,4 +23,5 @@ release:
 	twine upload dist/*
 
 test:
-	python runtests.py
+	coverage run --branch --source="decorator_plus" runtests.py
+	coverage report --show-missing
