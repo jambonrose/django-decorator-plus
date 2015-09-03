@@ -19,7 +19,7 @@ SEPARATOR = '.'
 
 # PEP 440 Compliant Semantic Versioning
 # major, minor, micro, label/type, label/type number
-VERSION = (0, 0, 1, DEV, 0)
+VERSION = (0, 0, 1, ALPHA, 0)
 
 
 def get_git_changeset():
