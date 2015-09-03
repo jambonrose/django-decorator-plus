@@ -1,3 +1,4 @@
 coverage
--e git+https://github.com/jambonrose/django-test-plus.git@405_code#egg=django-test-plus
+Django
+git+https://github.com/jambonrose/django-test-plus.git@405_code
 tox

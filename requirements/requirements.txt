@@ -1,3 +1,0 @@
-Django
-git+https://github.com/jambonrose/django-test-plus.git@405_code
-six
