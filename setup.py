@@ -39,6 +39,8 @@ setup(
 
     license='Simplified BSD License',
 
+    install_requires=['Django>=1.4', 'six'],
+
     # See https://pypi.python.org/pypi?%3Aaction=list_classifiers
     classifiers=[
         'Development Status :: 1 - Planning',
