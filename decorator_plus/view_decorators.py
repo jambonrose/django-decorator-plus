@@ -82,3 +82,9 @@ require_safe_methods = require_http_methods(["GET", "HEAD"])
 require_safe_methods.__doc__ = (
     "Decorator to require that a function view only accept safe methods: "
     "GET and HEAD.")
+
+
+require_form_methods = require_http_methods(["GET", "HEAD", "POST"])
+require_form_methods.__doc__ = (
+    "Decorator to require that a function view only accept "
+    "GET, HEAD and POST methods.")
