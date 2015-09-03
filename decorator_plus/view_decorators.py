@@ -32,8 +32,8 @@ def require_http_methods(request_methods):
     """
     if not isinstance(request_methods, (list, tuple)):
         raise ImproperlyConfigured(
-            "require_http_methods dcorator must be called "
-            "with a list or tuple of strings:\n\n"
+            "require_http_methods decorator must be called "
+            "with a list or tuple of strings. For example:\n\n"
             "    @require_http_methods(['GET', 'POST'])\n"
             "    def function_view(request):\n"
             "        ...\n")
