@@ -2,6 +2,17 @@
 Django Decorator Plus
 =====================
 
+.. image:: http://img.shields.io/pypi/status/django-decorator-plus.svg
+    :target: https://pypi.python.org/pypi/django-decorator-plus
+.. image:: http://img.shields.io/pypi/v/django-decorator-plus.svg
+    :target: https://pypi.python.org/pypi/django-decorator-plus
+.. image:: https://img.shields.io/pypi/pyversions/django-decorator-plus.svg
+    :target: https://pypi.python.org/pypi/django-decorator-plus
+
+.. image:: https://readthedocs.org/projects/django-decorator-plus/badge/?version=latest
+    :target: https://django-decorator-plus.readthedocs.org
+    :alt: Documentation Statu
+
 Description
 ===========
 
