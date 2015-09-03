@@ -8,6 +8,8 @@ Django Decorator Plus
     :target: https://pypi.python.org/pypi/django-decorator-plus
 .. image:: https://img.shields.io/pypi/pyversions/django-decorator-plus.svg
     :target: https://pypi.python.org/pypi/django-decorator-plus
+.. image:: https://img.shields.io/badge/Django-1.7%2C%201.8-brightgreen.svg
+    :target: https://pypi.python.org/pypi/django-decorator-plus
 
 .. image:: https://readthedocs.org/projects/django-decorator-plus/badge/?version=latest
     :target: https://django-decorator-plus.readthedocs.org
