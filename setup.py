@@ -22,7 +22,12 @@ with open(join(PROJECT_DIR, 'DESCRIPTION.rst'), encoding='utf-8') as f:
 version = {}
 version_file = join(PROJECT_DIR, 'decorator_plus', 'version.py')
 with open(version_file, encoding='utf-8') as f:
-    exec(f.read(), version)
+    contents = [
+        l
+        for l in f.readlines()
+        if not l.startswith('# -*-') and not l.startswith('# coding=')
+    ]
+    exec('\n'.join(contents), version)
 
 setup(
     name='django-decorator-plus',
