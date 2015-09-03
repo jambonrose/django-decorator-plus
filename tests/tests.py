@@ -35,8 +35,9 @@ class DecoratorTests(TestCase):
         self.response_405(response)
         response = self.client.put(url)
         self.response_405(response)
-        self.client.trace(url)
-        self.response_405(response)
+        if hasattr(self.client, 'trace'):
+            self.client.trace(url)
+            self.response_405(response)
 
     def test_require_http_methods_get(self):
         url_name = 'limit-get'
@@ -56,8 +57,9 @@ class DecoratorTests(TestCase):
         self.response_405()
         response = self.client.put(url)
         self.response_405(response)
-        self.client.trace(url)
-        self.response_405(response)
+        if hasattr(self.client, 'trace'):
+            self.client.trace(url)
+            self.response_405(response)
 
     def test_require_http_methods_post(self):
         url_name = 'limit-post'
@@ -78,8 +80,9 @@ class DecoratorTests(TestCase):
         self.response_405(response)
         response = self.client.put(url)
         self.response_405(response)
-        self.client.trace(url)
-        self.response_405(response)
+        if hasattr(self.client, 'trace'):
+            self.client.trace(url)
+            self.response_405(response)
 
     def test_require_http_methods_safe(self):
         url_name = 'limit-safe'
@@ -99,5 +102,6 @@ class DecoratorTests(TestCase):
         self.response_405()
         response = self.client.put(url)
         self.response_405(response)
-        self.client.trace(url)
-        self.response_405(response)
+        if hasattr(self.client, 'trace'):
+            self.client.trace(url)
+            self.response_405(response)
